@@ -1,6 +1,5 @@
 # vue-youtube
-A simple project using vue-cli based on [https://www.youtube.com/watch?v=NQ2i5cZ87ug&list=PLqKQF2ojwm3njNpksFCi8o-_c-9Vva_W0]( creating CRM-system)
-
+A simple project using vue-cli based on [creating CRM-system](https://www.youtube.com/watch?v=NQ2i5cZ87ug&list=PLqKQF2ojwm3njNpksFCi8o-_c-9Vva_W0)
 ## Project setup
 ```
 yarn install
