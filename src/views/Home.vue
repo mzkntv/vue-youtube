@@ -27,6 +27,11 @@ import HomeCurrency from '@/components/app/HomeCurrency.vue';
 import Loader from '../components/app/Loader.vue';
 
 export default {
+  metaInfo() {
+    return {
+      title: this.$title('ProfileTitle'),
+    };
+  },
   name: 'Home',
   data: () => ({
     loading: true,

@@ -2,7 +2,7 @@
   <div>
     <div class="page-title">
       <h3>Планирование</h3>
-      <h4>12 212</h4>
+      <h4>{{info.bill | currency}}</h4>
     </div>
 
     <Loader v-if="loading"/>
@@ -31,13 +31,23 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
+  metaInfo() {
+    return {
+      title: this.$title('ProfileTitle'),
+    };
+  },
   name: 'planning',
   data() {
     return {
       loading: true,
       categories: [],
     };
+  },
+  computed: {
+    ...mapGetters(['info']),
   },
   async mounted() {
     const records = await this.$store.dispatch('fetchRecords');
@@ -61,13 +71,6 @@ export default {
         : percent < 100
           ? 'yellow'
           : 'red';
-
-      console.log({
-        ...cat,
-        progressPercent,
-        progressColor,
-        spend,
-      });
 
       return {
         ...cat,

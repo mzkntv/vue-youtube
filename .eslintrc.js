@@ -16,5 +16,6 @@ module.exports = {
     'no-nested-ternary': 'off',
     'prefer-destructuring': 'off',
     'arrow-body-style': 'off',
+    'dot-notation': 'off',
   },
 };
